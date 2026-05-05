@@ -1,0 +1,2114 @@
+#include <fcntl.h>
+#include <unistd.h>
+
+int main() {
+    int fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    if (fd < 0) return 1;
+    if (write(fd, "Secure", 6) != 6) return 1;
+    close(fd);
+    return 0;
+}
+
+#include <fcntl.h>
+#include <unistd.h>
+
+int main() {
+    int fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    if (fd < 0) return 1;
+    if (write(fd, "Secure", 6) != 6) return 1;
+    close(fd);
+    return 0;
+}
+
+#include <fcntl.h>
+#include <unistd.h>
+
+int main() {
+    int fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    if (fd < 0) return 1;
+    if (write(fd, "Secure", 6) != 6) return 1;
+    close(fd);
+    return 0;
+}
+
+#!/bin/bash
+ls -l "$1"
+chown "$(whoami)":"$(whoami)" "$1"
+ls -l "$1"
+
+#!/bin/bash
+ls -l "$1"
+chown "$(whoami)":"$(whoami)" "$1"
+ls -l "$1"
+
+#!/bin/bash
+ls -l "$1"
+chown "$(whoami)":"$(whoami)" "$1"
+ls -l "$1"
+
+#!/bin/bash
+ls -l "$1"
+chown "$(whoami)":"$(whoami)" "$1"
+ls -l "$1"
+
+#!/bin/bash
+ls -l "$1"
+chown "$(whoami)":"$(whoami)" "$1"
+ls -l "$1"
+
+#!/bin/bash
+ls -l "$1"
+chown "$(whoami)":"$(whoami)" "$1"
+ls -l "$1"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+
+int main() {
+    const char *filename = "testfile.bin";
+    int fd = open(filename, O_RDWR | O_CREAT, 0666);
+    if (fd < 0) return 1;
+
+    if (ftruncate(fd, 1024) == -1) {
+        close(fd);
+        return 1;
+    }
+
+    char *data = mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (data == MAP_FAILED) {
+        close(fd);
+        return 1;
+    }
+
+    for (int i = 1023; i >= 0; i--) {
+        putchar(data[i]);
+    }
+
+    munmap(data, 1024);
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+
+int main() {
+    const char *filename = "testfile.bin";
+    int fd = open(filename, O_RDWR | O_CREAT, 0666);
+    if (fd < 0) return 1;
+
+    if (ftruncate(fd, 1024) == -1) {
+        close(fd);
+        return 1;
+    }
+
+    char *data = mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (data == MAP_FAILED) {
+        close(fd);
+        return 1;
+    }
+
+    for (int i = 1023; i >= 0; i--) {
+        putchar(data[i]);
+    }
+
+    munmap(data, 1024);
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+
+int main() {
+    const char *filename = "testfile.bin";
+    int fd = open(filename, O_RDWR | O_CREAT, 0666);
+    if (fd < 0) return 1;
+
+    if (ftruncate(fd, 1024) == -1) {
+        close(fd);
+        return 1;
+    }
+
+    char *data = mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (data == MAP_FAILED) {
+        close(fd);
+        return 1;
+    }
+
+    for (int i = 1023; i >= 0; i--) {
+        putchar(data[i]);
+    }
+
+    munmap(data, 1024);
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+
+int main() {
+    const char *filename = "testfile.bin";
+    int fd = open(filename, O_RDWR | O_CREAT, 0666);
+    if (fd < 0) return 1;
+
+    if (ftruncate(fd, 1024) == -1) {
+        close(fd);
+        return 1;
+    }
+
+    char *data = mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (data == MAP_FAILED) {
+        close(fd);
+        return 1;
+    }
+
+    for (int i = 1023; i >= 0; i--) {
+        putchar(data[i]);
+    }
+
+    munmap(data, 1024);
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+
+int main() {
+    const char *filename = "testfile.bin";
+    int fd = open(filename, O_RDWR | O_CREAT, 0666);
+    if (fd < 0) return 1;
+
+    if (ftruncate(fd, 1024) == -1) {
+        close(fd);
+        return 1;
+    }
+
+    char *data = mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (data == MAP_FAILED) {
+        close(fd);
+        return 1;
+    }
+
+    for (int i = 1023; i >= 0; i--) {
+        putchar(data[i]);
+    }
+
+    munmap(data, 1024);
+    close(fd);
+    return 0;
+}
+
+find . -type f -size +1k -printf "%p %s bytes\n"
+
+find . -type f -size +1k -exec ls -lh {} +
+
+find . -type f -size +1k -printf "%p %s\n"
+
+find . -type f -size +1k -printf "%p %s bytes\n"
+
+find . -type f -size +1k -printf "%p %k KB\n"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/file.h>
+#include <string.h>
+
+int main() {
+    int fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+    if (fd < 0) {
+        perror("open");
+        return 1;
+    }
+
+    if (flock(fd, LOCK_EX) < 0) {
+        perror("flock");
+        close(fd);
+        return 1;
+    }
+
+    if (write(fd, "Locked", 6) < 0) {
+        perror("write");
+        flock(fd, LOCK_UN);
+        close(fd);
+        return 1;
+    }
+
+    if (flock(fd, LOCK_UN) < 0) {
+        perror("flock unlock");
+        close(fd);
+        return 1;
+    }
+
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/file.h>
+#include <string.h>
+
+int main() {
+    int fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+    if (fd < 0) {
+        perror("open");
+        return 1;
+    }
+
+    if (flock(fd, LOCK_EX) < 0) {
+        perror("flock");
+        close(fd);
+        return 1;
+    }
+
+    if (write(fd, "Locked", 6) < 0) {
+        perror("write");
+        flock(fd, LOCK_UN);
+        close(fd);
+        return 1;
+    }
+
+    if (flock(fd, LOCK_UN) < 0) {
+        perror("flock unlock");
+        close(fd);
+        return 1;
+    }
+
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/file.h>
+#include <string.h>
+
+int main() {
+    int fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+    if (fd < 0) {
+        perror("open");
+        return 1;
+    }
+
+    if (flock(fd, LOCK_EX) < 0) {
+        perror("flock");
+        close(fd);
+        return 1;
+    }
+
+    if (write(fd, "Locked", 6) < 0) {
+        perror("write");
+        flock(fd, LOCK_UN);
+        close(fd);
+        return 1;
+    }
+
+    if (flock(fd, LOCK_UN) < 0) {
+        perror("flock unlock");
+        close(fd);
+        return 1;
+    }
+
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/file.h>
+#include <string.h>
+
+int main() {
+    int fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+    if (fd < 0) {
+        perror("open");
+        return 1;
+    }
+
+    if (flock(fd, LOCK_EX) < 0) {
+        perror("flock");
+        close(fd);
+        return 1;
+    }
+
+    if (write(fd, "Locked", 6) < 0) {
+        perror("write");
+        flock(fd, LOCK_UN);
+        close(fd);
+        return 1;
+    }
+
+    if (flock(fd, LOCK_UN) < 0) {
+        perror("flock unlock");
+        close(fd);
+        return 1;
+    }
+
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/file.h>
+#include <string.h>
+
+int main() {
+    int fd = open("test.txt", O_WRONLY | O_CREAT, 0644);
+    if (fd < 0) {
+        perror("open");
+        return 1;
+    }
+
+    if (flock(fd, LOCK_EX) < 0) {
+        perror("flock");
+        close(fd);
+        return 1;
+    }
+
+    if (write(fd, "Locked", 6) < 0) {
+        perror("write");
+        flock(fd, LOCK_UN);
+        close(fd);
+        return 1;
+    }
+
+    if (flock(fd, LOCK_UN) < 0) {
+        perror("flock unlock");
+        close(fd);
+        return 1;
+    }
+
+    close(fd);
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/wait.h>
+
+int main() {
+    int fd[2];
+    pipe(fd);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        close(fd[1]);
+        char buffer[100];
+        read(fd[0], buffer, sizeof(buffer));
+        printf("%s\n", buffer);
+        close(fd[0]);
+    } else {
+        close(fd[0]);
+        char msg[] = "Hello OS";
+        write(fd[1], msg, strlen(msg) + 1);
+        close(fd[1]);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/wait.h>
+
+int main() {
+    int fd[2];
+    pipe(fd);
+
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        close(fd[0]);
+        char msg[] = "Hello OS";
+        write(fd[1], msg, strlen(msg) + 1);
+        close(fd[1]);
+        wait(NULL);
+    } else {
+        close(fd[1]);
+        char buffer[100];
+        read(fd[0], buffer, sizeof(buffer));
+        printf("%s\n", buffer);
+        close(fd[0]);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/wait.h>
+
+int main() {
+    int fd[2];
+    pipe(fd);
+
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        close(fd[0]);
+        char msg[] = "Hello OS";
+        write(fd[1], msg, strlen(msg) + 1);
+        close(fd[1]);
+        wait(NULL);
+    } else {
+        close(fd[1]);
+        char buffer[100];
+        read(fd[0], buffer, sizeof(buffer));
+        printf("%s\n", buffer);
+        close(fd[0]);
+    }
+
+    return 0;
+}
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int fd[2];
+    pipe(fd);
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        close(fd[0]);
+        char msg[] = "Hello OS";
+        write(fd[1], msg, strlen(msg) + 1);
+        close(fd[1]);
+    } else {
+        close(fd[1]);
+        char buf[100];
+        read(fd[0], buf, sizeof(buf));
+        printf("%s\n", buf);
+        close(fd[0]);
+    }
+
+    return 0;
+}
+
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int fd[2];
+    pipe(fd);
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        close(fd[0]);
+        char msg[] = "Hello OS";
+        write(fd[1], msg, strlen(msg) + 1);
+        close(fd[1]);
+    } else {
+        close(fd[1]);
+        char buf[100];
+        read(fd[0], buf, sizeof(buf));
+        printf("%s\n", buf);
+        close(fd[0]);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/wait.h>
+
+int main() {
+    const char *name = "/my_shm";
+    int shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    ftruncate(shm_fd, sizeof(int));
+    int *ptr = mmap(0, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+
+    *ptr = 10;
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        *ptr = 42;
+        munmap(ptr, sizeof(int));
+        close(shm_fd);
+        exit(0);
+    } else {
+        wait(NULL);
+        printf("%d\n", *ptr);
+        munmap(ptr, sizeof(int));
+        close(shm_fd);
+        shm_unlink(name);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/wait.h>
+
+int main() {
+    const char *name = "/shm_example";
+    int shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    ftruncate(shm_fd, sizeof(int));
+    int *ptr = mmap(0, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+
+    *ptr = 1;
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        *ptr = 42;
+        munmap(ptr, sizeof(int));
+        close(shm_fd);
+        exit(0);
+    } else {
+        wait(NULL);
+        printf("%d\n", *ptr);
+        munmap(ptr, sizeof(int));
+        close(shm_fd);
+        shm_unlink(name);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/wait.h>
+
+int main() {
+    const char *name = "/myshm";
+    int fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    ftruncate(fd, sizeof(int));
+    int *ptr = mmap(0, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+
+    *ptr = 1;
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        *ptr = 42;
+        munmap(ptr, sizeof(int));
+        close(fd);
+        exit(0);
+    } else {
+        wait(NULL);
+        printf("%d\n", *ptr);
+        munmap(ptr, sizeof(int));
+        close(fd);
+        shm_unlink(name);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    const char *name = "/shm_example";
+    int fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    ftruncate(fd, sizeof(int));
+    int *ptr = mmap(0, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+
+    *ptr = 1;
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        *ptr = 42;
+        munmap(ptr, sizeof(int));
+        close(fd);
+        exit(0);
+    } else {
+        wait(NULL);
+        printf("%d\n", *ptr);
+        munmap(ptr, sizeof(int));
+        close(fd);
+        shm_unlink(name);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    const char *name = "/shm_example";
+    int shm_fd = shm_open(name, O_CREAT | O_RDWR, 0666);
+    ftruncate(shm_fd, sizeof(int));
+    int *ptr = mmap(0, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+
+    *ptr = 10;
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        *ptr = 42;
+        munmap(ptr, sizeof(int));
+        close(shm_fd);
+        exit(0);
+    } else {
+        wait(NULL);
+        printf("%d\n", *ptr);
+        munmap(ptr, sizeof(int));
+        close(shm_fd);
+        shm_unlink(name);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/wait.h>
+
+int main() {
+    int sockfd, connfd;
+    struct sockaddr_in addr;
+    pid_t pid;
+
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    addr.sin_port = htons(8080);
+
+    bind(sockfd, (struct sockaddr*)&addr, sizeof(addr));
+    listen(sockfd, 1);
+
+    pid = fork();
+
+    if (pid == 0) {
+        sleep(1);
+        int clientfd = socket(AF_INET, SOCK_STREAM, 0);
+        connect(clientfd, (struct sockaddr*)&addr, sizeof(addr));
+        send(clientfd, "Test", 4, 0);
+        close(clientfd);
+        exit(0);
+    } else {
+        connfd = accept(sockfd, NULL, NULL);
+        char buf[1024] = {0};
+        read(connfd, buf, sizeof(buf));
+        printf("%s\n", buf);
+        close(connfd);
+        close(sockfd);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <netinet/in.h>
+
+int main() {
+    int server_fd, client_fd;
+    struct sockaddr_in addr;
+    char buffer[1024] = {0};
+
+    server_fd = socket(AF_INET, SOCK_STREAM, 0);
+
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = INADDR_ANY;
+    addr.sin_port = htons(8080);
+
+    bind(server_fd, (struct sockaddr*)&addr, sizeof(addr));
+    listen(server_fd, 1);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sleep(1);
+        int sock = socket(AF_INET, SOCK_STREAM, 0);
+        struct sockaddr_in serv_addr;
+        serv_addr.sin_family = AF_INET;
+        serv_addr.sin_port = htons(8080);
+        inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr);
+        connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
+        send(sock, "Test", 4, 0);
+        close(sock);
+        exit(0);
+    } else {
+        client_fd = accept(server_fd, NULL, NULL);
+        read(client_fd, buffer, sizeof(buffer));
+        printf("%s\n", buffer);
+        close(client_fd);
+        close(server_fd);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    int sockfd, connfd;
+    struct sockaddr_in addr;
+    pid_t pid;
+
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    memset(&addr, 0, sizeof(addr));
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    addr.sin_port = htons(8080);
+
+    bind(sockfd, (struct sockaddr *)&addr, sizeof(addr));
+    listen(sockfd, 1);
+
+    pid = fork();
+
+    if (pid == 0) {
+        sleep(1);
+        int clientfd = socket(AF_INET, SOCK_STREAM, 0);
+        connect(clientfd, (struct sockaddr *)&addr, sizeof(addr));
+        send(clientfd, "Test", 4, 0);
+        close(clientfd);
+        exit(0);
+    } else {
+        connfd = accept(sockfd, NULL, NULL);
+        char buf[1024] = {0};
+        recv(connfd, buf, sizeof(buf), 0);
+        printf("%s\n", buf);
+        close(connfd);
+        close(sockfd);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    int sockfd, connfd;
+    struct sockaddr_in servaddr;
+    pid_t pid;
+
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    memset(&servaddr, 0, sizeof(servaddr));
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    servaddr.sin_port = htons(8080);
+
+    bind(sockfd, (struct sockaddr*)&servaddr, sizeof(servaddr));
+    listen(sockfd, 1);
+
+    pid = fork();
+
+    if (pid == 0) {
+        sleep(1);
+        int clientfd = socket(AF_INET, SOCK_STREAM, 0);
+        connect(clientfd, (struct sockaddr*)&servaddr, sizeof(servaddr));
+        send(clientfd, "Test", 4, 0);
+        close(clientfd);
+        exit(0);
+    } else {
+        connfd = accept(sockfd, NULL, NULL);
+        char buf[1024] = {0};
+        recv(connfd, buf, sizeof(buf), 0);
+        printf("%s\n", buf);
+        close(connfd);
+        close(sockfd);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    int sockfd, connfd;
+    struct sockaddr_in addr;
+    char buffer[1024] = {0};
+
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    addr.sin_port = htons(8080);
+
+    bind(sockfd, (struct sockaddr *)&addr, sizeof(addr));
+    listen(sockfd, 1);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sleep(1);
+        int clientfd = socket(AF_INET, SOCK_STREAM, 0);
+        connect(clientfd, (struct sockaddr *)&addr, sizeof(addr));
+        send(clientfd, "Test", 4, 0);
+        close(clientfd);
+        exit(0);
+    } else {
+        connfd = accept(sockfd, NULL, NULL);
+        recv(connfd, buffer, sizeof(buffer), 0);
+        printf("%s\n", buffer);
+        close(connfd);
+        close(sockfd);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdlib.h>
+
+int main() {
+    system("ls | grep '\\.txt$' > results.txt");
+    return 0;
+}
+
+#include <stdlib.h>
+
+int main() {
+    system("ls | grep '\\.txt$' > results.txt");
+    return 0;
+}
+
+#include <stdlib.h>
+
+int main() {
+    system("ls | grep '\\.txt$' > results.txt");
+    return 0;
+}
+
+#include <stdlib.h>
+
+int main() {
+    system("ls | grep '\\.txt$' > results.txt");
+    return 0;
+}
+
+#include <stdlib.h>
+
+int main() {
+    system("ls | grep '\\.txt$' > results.txt");
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/wait.h>
+#include <semaphore.h>
+
+int main() {
+    sem_t *sem_prod = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *sem_cons = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    int *shared = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+    sem_init(sem_prod, 1, 1);
+    sem_init(sem_cons, 1, 0);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sem_wait(sem_cons);
+        printf("Child consumed: %d\n", *shared);
+        sem_post(sem_prod);
+    } else {
+        sem_wait(sem_prod);
+        *shared = 42;
+        printf("Parent produced: %d\n", *shared);
+        sem_post(sem_cons);
+        wait(NULL);
+    }
+
+    sem_destroy(sem_prod);
+    sem_destroy(sem_cons);
+    munmap(sem_prod, sizeof(sem_t));
+    munmap(sem_cons, sizeof(sem_t));
+    munmap(shared, sizeof(int));
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/wait.h>
+#include <semaphore.h>
+
+int main() {
+    sem_t *sem_prod = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *sem_cons = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    int *buffer = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+    sem_init(sem_prod, 1, 1);
+    sem_init(sem_cons, 1, 0);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sem_wait(sem_cons);
+        printf("Consumed: %d\n", *buffer);
+        sem_post(sem_prod);
+        exit(0);
+    } else {
+        sem_wait(sem_prod);
+        *buffer = 42;
+        printf("Produced: %d\n", *buffer);
+        sem_post(sem_cons);
+        wait(NULL);
+    }
+
+    sem_destroy(sem_prod);
+    sem_destroy(sem_cons);
+    munmap(sem_prod, sizeof(sem_t));
+    munmap(sem_cons, sizeof(sem_t));
+    munmap(buffer, sizeof(int));
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/wait.h>
+#include <semaphore.h>
+
+int main() {
+    sem_t *empty = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *full = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    int *buffer = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+    sem_init(empty, 1, 1);
+    sem_init(full, 1, 0);
+
+    pid_t pid = fork();
+
+    if (pid > 0) {
+        int value = 42;
+        sem_wait(empty);
+        *buffer = value;
+        printf("Produced: %d\n", value);
+        sem_post(full);
+        wait(NULL);
+    } else {
+        sem_wait(full);
+        int value = *buffer;
+        printf("Consumed: %d\n", value);
+        sem_post(empty);
+    }
+
+    sem_destroy(empty);
+    sem_destroy(full);
+    munmap(empty, sizeof(sem_t));
+    munmap(full, sizeof(sem_t));
+    munmap(buffer, sizeof(int));
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/wait.h>
+#include <semaphore.h>
+
+int main() {
+    int *buffer = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *empty = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *full = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+    sem_init(empty, 1, 1);
+    sem_init(full, 1, 0);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sem_wait(full);
+        int value = *buffer;
+        printf("Consumed: %d\n", value);
+        sem_post(empty);
+        exit(0);
+    } else {
+        sem_wait(empty);
+        *buffer = 42;
+        printf("Produced: %d\n", *buffer);
+        sem_post(full);
+        wait(NULL);
+    }
+
+    sem_destroy(empty);
+    sem_destroy(full);
+    munmap(buffer, sizeof(int));
+    munmap(empty, sizeof(sem_t));
+    munmap(full, sizeof(sem_t));
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/mman.h>
+#include <sys/wait.h>
+#include <semaphore.h>
+
+int main() {
+    int *buffer = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *empty = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    sem_t *full = mmap(NULL, sizeof(sem_t), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+
+    sem_init(empty, 1, 1);
+    sem_init(full, 1, 0);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sem_wait(full);
+        int value = *buffer;
+        printf("Consumed: %d\n", value);
+        sem_post(empty);
+        exit(0);
+    } else {
+        sem_wait(empty);
+        *buffer = 42;
+        printf("Produced: %d\n", *buffer);
+        sem_post(full);
+        wait(NULL);
+    }
+
+    sem_destroy(empty);
+    sem_destroy(full);
+    munmap(buffer, sizeof(int));
+    munmap(empty, sizeof(sem_t));
+    munmap(full, sizeof(sem_t));
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        printf("%d\n", getpid());
+        return 0;
+    } else {
+        wait(NULL);
+        printf("Child done\n");
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        printf("%d\n", getpid());
+        _exit(0);
+    } else {
+        wait(NULL);
+        printf("Child done\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        printf("Child PID: %d\n", getpid());
+        exit(0);
+    } else if (pid > 0) {
+        wait(NULL);
+        printf("Child done\n");
+    } else {
+        perror("fork");
+        return 1;
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        printf("Child PID: %d\n", getpid());
+        _exit(0);
+    } else if (pid > 0) {
+        wait(NULL);
+        printf("Child done\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        exit(1);
+    } else if (pid == 0) {
+        printf("%d\n", getpid());
+        exit(0);
+    } else {
+        wait(NULL);
+        printf("Child done\n");
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    for (int i = 0; i < 3; i++) {
+        pid_t pid = fork();
+        if (pid == 0) {
+            sleep(2);
+            exit(0);
+        } else if (pid < 0) {
+            exit(1);
+        }
+    }
+
+    for (int i = 0; i < 3; i++) {
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    for (int i = 0; i < 3; i++) {
+        pid_t pid = fork();
+        if (pid == 0) {
+            sleep(2);
+            exit(0);
+        }
+    }
+    for (int i = 0; i < 3; i++) {
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    for (int i = 0; i < 3; i++) {
+        pid_t pid = fork();
+        if (pid == 0) {
+            sleep(2);
+            _exit(0);
+        }
+    }
+    for (int i = 0; i < 3; i++) {
+        wait(NULL);
+    }
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    for (int i = 0; i < 3; i++) {
+        pid_t pid = fork();
+        if (pid == 0) {
+            sleep(2);
+            _exit(0);
+        }
+    }
+    for (int i = 0; i < 3; i++) {
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <unistd.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+
+int main() {
+    for (int i = 0; i < 3; i++) {
+        pid_t pid = fork();
+        if (pid == 0) {
+            sleep(2);
+            _exit(0);
+        }
+    }
+    for (int i = 0; i < 3; i++) {
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        execlp("ls", "ls", NULL);
+        exit(EXIT_FAILURE);
+    } else if (pid > 0) {
+        wait(NULL);
+    } else {
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        execlp("ls", "ls", NULL);
+        _exit(1);
+    } else if (pid > 0) {
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        execlp("ls", "ls", NULL);
+        _exit(1);
+    } else if (pid > 0) {
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        execlp("ls", "ls", NULL);
+        exit(EXIT_FAILURE);
+    } else if (pid > 0) {
+        wait(NULL);
+    } else {
+        exit(EXIT_FAILURE);
+    }
+    return 0;
+}
+
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        execlp("ls", "ls", (char *)NULL);
+        exit(1);
+    } else {
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#!/bin/bash
+
+user=$(whoami)
+
+ps -u "$user" -o pid=,comm=,etimes= --sort=-etimes | awk '$2 !~ /bash|sh/ {print $1, $2; exit}' | while read pid cmd; do
+    echo "Simulating: kill $pid ($cmd)"
+done
+
+#!/bin/bash
+
+user=$(whoami)
+
+ps -u "$user" -o pid=,comm=,etimes= --sort=-etimes | awk '$2 !~ /bash|sh/ {print $1, $2; exit}' | while read pid cmd; do
+    echo "Simulating: kill $pid ($cmd)"
+done
+
+#!/bin/bash
+ps -u "$USER" -o pid=,comm=,lstart= --sort=start_time | grep -Ev '(bash|sh|zsh)' | head -n 1 | awk '{print "echo kill " $1}'
+
+#!/bin/bash
+ps -u "$USER" -o pid=,comm=,lstart= --sort=start_time
+pid=$(ps -u "$USER" -o pid=,comm= --sort=start_time | awk '$2 !~ /(bash|sh|zsh)/ {print $1; exit}')
+[ -n "$pid" ] && echo "Simulating kill of PID $pid"
+
+#!/bin/bash
+ps -u "$USER"
+pid=$(ps -u "$USER" -o pid=,comm=,lstart= | grep -vE '(bash|sh|zsh)' | sort -k3,7 | head -n1 | awk '{print $1}')
+[ -n "$pid" ] && echo "Simulating kill of process $pid"
+
+#!/bin/bash
+user=$(whoami)
+procs=$(ps -u "$user" -o pid=,comm=,etimes= --sort=-etimes)
+echo "$procs"
+pid=$(echo "$procs" | grep -vE '(bash|sh)$' | head -n 1 | awk '{print $1}')
+if [ -n "$pid" ]; then
+  echo "Simulating kill of process $pid"
+fi
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        _exit(0);
+    } else if (pid > 0) {
+        sleep(5);
+        wait(NULL);
+    } else {
+        perror("fork");
+        exit(1);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        exit(0);
+    } else if (pid > 0) {
+        sleep(5);
+        wait(NULL);
+    } else {
+        perror("fork");
+        return 1;
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        perror("fork");
+        exit(EXIT_FAILURE);
+    } else if (pid == 0) {
+        exit(0);
+    } else {
+        sleep(5);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        exit(0);
+    } else if (pid > 0) {
+        sleep(5);
+        wait(NULL);
+    } else {
+        perror("fork");
+        return 1;
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        _exit(0);
+    } else if (pid > 0) {
+        sleep(5);
+        wait(NULL);
+    } else {
+        return 1;
+    }
+
+    return 0;
+}
+
+#!/bin/bash
+PID="$1"
+while true; do
+    CPU=$(ps -p "$PID" -o %cpu= | awk '{print int($1)}')
+    if [ "$CPU" -gt 50 ]; then
+        echo "Would kill process $PID (CPU: $CPU%)"
+    fi
+    sleep 1
+done
+
+#!/bin/bash
+PID="$1"
+while true; do
+    CPU=$(ps -p "$PID" -o %cpu= | awk '{print int($1)}')
+    if [ "$CPU" -gt 50 ]; then
+        echo "Would kill process $PID (CPU: $CPU%)"
+    fi
+    sleep 1
+done
+
+#!/bin/bash
+PID="$1"
+while true; do
+    CPU=$(ps -p "$PID" -o %cpu= | awk '{print int($1)}')
+    if [ "$CPU" -gt 50 ]; then
+        echo "Would kill process $PID (CPU: $CPU%)"
+    fi
+    sleep 1
+done
+
+#!/bin/bash
+PID="$1"
+while true; do
+    CPU=$(ps -p "$PID" -o %cpu= | awk '{print int($1)}')
+    if [ "$CPU" -gt 50 ]; then
+        echo "Would kill process $PID (CPU: $CPU%)"
+    fi
+    sleep 1
+done
+
+#!/bin/bash
+PID="$1"
+while true; do
+    CPU=$(ps -p "$PID" -o %cpu= | awk '{print int($1)}')
+    if [ "$CPU" -gt 50 ]; then
+        echo "Would kill process $PID (CPU: $CPU%)"
+    fi
+    sleep 1
+done
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+void handler(int sig) {
+    const char msg[] = "Caught!\n";
+    write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+    _exit(0);
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGINT, &sa, NULL);
+    while (1) pause();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+void handler(int sig) {
+    const char msg[] = "Caught!\n";
+    write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+    _exit(0);
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGINT, &sa, NULL);
+    while (1) pause();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+void handler(int sig) {
+    const char msg[] = "Caught!\n";
+    write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+    _exit(0);
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGINT, &sa, NULL);
+    while (1) pause();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+void handler(int sig) {
+    const char msg[] = "Caught!\n";
+    write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+    _exit(0);
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGINT, &sa, NULL);
+    while (1) pause();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
+
+void handler(int sig) {
+    const char msg[] = "Caught!\n";
+    write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+    _exit(0);
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = 0;
+    sigaction(SIGINT, &sa, NULL);
+    while (1) pause();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+void handler(int sig) {
+    write(STDOUT_FILENO, "Received\n", 9);
+    _exit(0);
+}
+
+int main() {
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        exit(1);
+    } else if (pid == 0) {
+        signal(SIGUSR1, handler);
+        pause();
+    } else {
+        sleep(1);
+        kill(pid, SIGUSR1);
+        wait(NULL);
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+void handler(int sig) {
+    write(STDOUT_FILENO, "Received\n", 9);
+    _exit(0);
+}
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        signal(SIGUSR1, handler);
+        pause();
+    } else {
+        sleep(1);
+        kill(pid, SIGUSR1);
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+void handler(int sig) {
+    write(STDOUT_FILENO, "Received\n", 9);
+    _exit(0);
+}
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        signal(SIGUSR1, handler);
+        pause();
+    } else {
+        sleep(1);
+        kill(pid, SIGUSR1);
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+void handler(int sig) {
+    write(STDOUT_FILENO, "Received\n", 9);
+    _exit(0);
+}
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        signal(SIGUSR1, handler);
+        pause();
+    } else {
+        sleep(1);
+        kill(pid, SIGUSR1);
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+
+void handler(int sig) {
+    write(STDOUT_FILENO, "Received\n", 9);
+    _exit(0);
+}
+
+int main() {
+    pid_t pid = fork();
+    if (pid == 0) {
+        signal(SIGUSR1, handler);
+        pause();
+    } else {
+        sleep(1);
+        kill(pid, SIGUSR1);
+        wait(NULL);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
+
+void handler(int sig) {
+    int status;
+    while (waitpid(-1, &status, WNOHANG) > 0) {
+        write(STDOUT_FILENO, "Child exited\n", 13);
+    }
+}
+
+int main() {
+    signal(SIGCHLD, handler);
+    pid_t pid = fork();
+    if (pid == 0) {
+        sleep(2);
+        _exit(0);
+    }
+    while (1) pause();
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
+
+void handler(int sig) {
+    int status;
+    while (waitpid(-1, &status, WNOHANG) > 0) {
+        write(STDOUT_FILENO, "Child exited\n", 13);
+    }
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = SA_RESTART;
+    sigaction(SIGCHLD, &sa, NULL);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sleep(2);
+        _exit(0);
+    }
+
+    while (1) {
+        pause();
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
+
+void handler(int sig) {
+    int status;
+    while (waitpid(-1, &status, WNOHANG) > 0) {
+        write(STDOUT_FILENO, "Child exited\n", 13);
+    }
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = SA_RESTART;
+    sigaction(SIGCHLD, &sa, NULL);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sleep(2);
+        _exit(0);
+    }
+
+    while (1) {
+        pause();
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
+
+void handler(int sig) {
+    int status;
+    while (waitpid(-1, &status, WNOHANG) > 0) {
+        write(STDOUT_FILENO, "Child exited\n", 13);
+    }
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = SA_RESTART;
+    sigaction(SIGCHLD, &sa, NULL);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sleep(2);
+        _exit(0);
+    }
+
+    while (1) {
+        pause();
+    }
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <signal.h>
+#include <sys/wait.h>
+
+void handler(int sig) {
+    int status;
+    while (waitpid(-1, &status, WNOHANG) > 0) {
+        write(STDOUT_FILENO, "Child exited\n", 13);
+    }
+}
+
+int main() {
+    struct sigaction sa;
+    sa.sa_handler = handler;
+    sigemptyset(&sa.sa_mask);
+    sa.sa_flags = SA_RESTART;
+    sigaction(SIGCHLD, &sa, NULL);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        sleep(2);
+        _exit(0);
+    }
+
+    while (1) {
+        pause();
+    }
+
+    return 0;
+}
+
+#!/bin/bash
+tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"; exit 0' SIGINT
+while true; do
+    sleep 1
+done
+
+#!/bin/bash
+tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"; exit 0' SIGINT
+while true; do
+    sleep 1
+done
+
+#!/bin/bash
+tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"; exit 0' SIGINT
+while true; do
+    sleep 1
+done
+
+#!/bin/bash
+tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"; exit 0' SIGINT
+while true; do
+    sleep 1
+done
+
+#!/bin/bash
+tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"; exit 0' SIGINT
+while true; do
+    sleep 1
+done
+
+#!/bin/bash
+ulimit -t 120
+ulimit -f 102400
+ulimit -u 30
+./$1 > output.log 2> error.log
+if [ $? -ne 0 ]; then 
+	echo "Ulimit triggered: Program exceeded limits!" >> error.log
+fi
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/stat.h>
+
+int main() {
+    int fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    if (fd < 0) return 1;
+    write(fd, "Secure", 6);
+    close(fd);
+    chmod("test.txt", 0600);
+    return 0;
+}
+
+#include <fcntl.h>
+#include <unistd.h>
+
+int main() {
+    int fd = open("test.txt", O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    if (fd < 0) return 1;
+    if (write(fd, "Secure", 6) != 6) return 1;
+    close(fd);
+    return 0;
+}
